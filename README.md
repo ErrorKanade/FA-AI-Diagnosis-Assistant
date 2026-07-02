@@ -16,11 +16,11 @@ FA 自動分析助手 (FA AI Diagnosis Assistant)本項目是一款基於 Stream
 
 架構流程項目核心採用了經典的 RAG (Retrieval-Augmented Generation) 架構：
 
-數據層：掃描 FA_History/ 文件夾下所有 Excel 文件 $\rightarrow$ 提取並壓平標題 $\rightarrow$ 生成/加載 FAISS 索引。
+數據層：掃描 FA_History/ 文件夾下所有 Excel 文件 提取並壓平標題 生成/加載 FAISS 索引。
 
-檢索層：用戶輸入故障現象 $\rightarrow$ 向量化並正規化 $\rightarrow$ FAISS 檢索 Top 10 相似案例 $\rightarrow$ 數據聚合與過濾。
+檢索層：用戶輸入故障現象 向量化並正規化 FAISS 檢索 Top 10 相似案例 數據聚合與過濾。
 
-生成層：提取最相關的 Top 5 案例拼接為 Context $\rightarrow$ 注入資深維修專家 Prompt $\rightarrow$ Ollama 串流輸出繁體中文分析報告。
+生成層：提取最相關的 Top 5 案例拼接為 Context  注入資深維修專家 Prompt Ollama 串流輸出繁體中文分析報告。
 
 環境依賴在運行本項目之前，請確保環境中已安裝 Python 3.8+ 以及以下依賴庫：
 前端與核心框架：
